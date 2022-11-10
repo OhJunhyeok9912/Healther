@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Program_home"/>
         <activity android:name=".Program_input"/>
         <activity android:name=".Signup" />
         <activity android:name=".Program"/>

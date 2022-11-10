@@ -15,14 +15,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity {
 
-    private EditText email_join;
-    private EditText pwd_join;
-    private EditText age_join,weight_join,height_join;
+    private EditText Email_join;
+    private EditText Pwd_join;
+    private EditText Age_join,Weight_join,Height_join;
     private Button btn;
     private final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     private final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -31,32 +32,35 @@ public class Signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
-        email_join = (EditText) findViewById(R.id.save_ID);
-        pwd_join = (EditText) findViewById(R.id.save_PW);
-        age_join=(EditText)findViewById(R.id.save_AGE);
-        weight_join=(EditText)findViewById(R.id.save_WEI);
-        height_join=(EditText)findViewById(R.id.save_HEI);
+        Email_join = (EditText) findViewById(R.id.save_ID);
+        Pwd_join = (EditText) findViewById(R.id.save_PW);
+        Age_join=(EditText)findViewById(R.id.save_AGE);
+        Weight_join=(EditText)findViewById(R.id.save_WEI);
+        Height_join=(EditText)findViewById(R.id.save_HEI);
         btn = (Button) findViewById(R.id.signup_but2);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String email = email_join.getText().toString().trim();
-                final String pwd = pwd_join.getText().toString().trim();
-                final String age = age_join.getText().toString().trim();
-                final String weight = weight_join.getText().toString().trim();
-                final String height = height_join.getText().toString().trim();
+                final String a = Email_join.getText().toString().trim();
+                final String b = Pwd_join.getText().toString().trim();
+                final String c = Age_join.getText().toString().trim();
+                final String d = Weight_join.getText().toString().trim();
+                final String e = Height_join.getText().toString().trim();
                 //공백인 부분을 제거하고 보여주는 trim();
 
 
-                firebaseAuth.createUserWithEmailAndPassword(email, pwd)
+                firebaseAuth.createUserWithEmailAndPassword(a, b)
                         .addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-
                                 if (task.isSuccessful()) {
-                                    Intent intent = new Intent(Signup.this, MainActivity.class);
-                                    startActivity(intent);
+                                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                    User newuser = new User(user.getEmail(),b,c,d,e);
+                                    databaseReference.child("User").child(user.getUid()).child("유저정보").setValue(newuser);
+                                    Toast.makeText(Signup.this, "가입 성공", Toast.LENGTH_SHORT).show();
+                                    Intent complete = new Intent(Signup.this, MainActivity.class);
+                                    startActivity(complete);
                                     finish();
 
                                 } else {
@@ -64,9 +68,13 @@ public class Signup extends AppCompatActivity {
                                 }
                             }
                         });
+
             }
+
         });
 
 
     }
+
+
 }

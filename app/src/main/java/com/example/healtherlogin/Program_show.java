@@ -6,6 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -78,11 +79,16 @@ public class Program_show extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 RM_save group = dataSnapshot.getValue(RM_save.class);
-                assert group != null;
-                info[0]= Double.parseDouble(group.getSquat()) / 2;
-                info[1]= Double.parseDouble(group.getBench()) / 2;
-                info[2]= Double.parseDouble(group.getBabel()) / 2;
-                info[3]= Double.parseDouble(group.getOver()) / 2;
+                if (group == null) {
+                    Intent Back = new Intent(Program_show.this, Program.class);
+                    startActivity(Back);
+                    Toast.makeText(Program_show.this, "5RM을 먼저 입력해 주세요", Toast.LENGTH_LONG).show();
+                    finish();
+                } else{
+                    info[0] = Double.parseDouble(group.getSquat()) / 2;
+                info[1] = Double.parseDouble(group.getBench()) / 2;
+                info[2] = Double.parseDouble(group.getBabel()) / 2;
+                info[3] = Double.parseDouble(group.getOver()) / 2;
                 info[4] = Double.parseDouble(group.getDead()) / 2;
 
                 squat = info[0];
@@ -147,12 +153,13 @@ public class Program_show extends AppCompatActivity {
 
 
                     }
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
 
                     }
                 });
-
+            }
             }
 
             @Override

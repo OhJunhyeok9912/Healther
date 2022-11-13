@@ -28,9 +28,8 @@ public class Golden_Six_Home extends AppCompatActivity {
     }
 
     public void Continue(View v) {
-        Intent Continue = new Intent(Golden_Six_Home.this, Golden_Six_Show.class);
+        Intent Continue = new Intent(Golden_Six_Home.this,Golden_Six_Do.class);
         startActivity(Continue);
-
     }
 
 }

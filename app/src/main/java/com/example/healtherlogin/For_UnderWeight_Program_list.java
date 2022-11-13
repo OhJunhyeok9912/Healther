@@ -33,7 +33,7 @@ public class For_UnderWeight_Program_list extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder program_info = new AlertDialog.Builder(For_UnderWeight_Program_list.this);
                 program_info.setIcon(R.mipmap.ic_launcher);
-                program_info.setTitle("골든 식스 상세정보");
+                program_info.setTitle("상세정보");
                 program_info.setMessage( getString(R.string.golden_six)+
                         "\n이 프로그램으로 운동을 하시겠습니까?");
 

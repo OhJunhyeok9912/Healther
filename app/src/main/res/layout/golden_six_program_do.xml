@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="417dp"
+        android:layout_height="33dp"
+        android:background="#673AB7"
+        android:gravity="center"
+        android:text="골든 식스 운동하기"
+        android:textColor="#77E87C"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="370dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="1dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="122dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="8dp"
+        android:text="운동시작"
+        app:layout_constraintBottom_toTopOf="@+id/textView30"
+        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="122dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:text="운동종료"
+        app:layout_constraintBottom_toTopOf="@+id/textView30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button11" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="122dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="8dp"
+        android:text="일시정지"
+        app:layout_constraintBottom_toTopOf="@+id/textView30"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintStart_toEndOf="@+id/button9" />
+
+    <ScrollView
+        android:layout_width="414dp"
+        android:layout_height="568dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/Squat_Row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:background="#2196F3"
+                    android:gravity="center_vertical"
+                    android:text="스쿼트"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="세트 간 2분 휴식" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView94"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="세트" />
+
+                        <TextView
+                            android:id="@+id/textView82"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="중량(kg)" />
+
+                        <TextView
+                            android:id="@+id/textView91"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="회수" />
+
+                        <TextView
+                            android:id="@+id/textView92"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/textView95"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView87"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="1" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber31"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber36"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox2"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView88"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="2" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber33"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber37"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox3"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox4"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView89"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="3" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber34"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber38"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox5"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox6"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView90"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="4" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber35"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber39"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox7"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox8"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+                </TableLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/Wide_Row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView97"
+                    android:layout_width="88dp"
+                    android:layout_height="250dp"
+                    android:background="#2196F3"
+                    android:gravity="center_vertical"
+                    android:text="와이드 그립 벤치 프레스"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="세트 간 90초 휴식" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView102"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:text="세트" />
+
+                        <TextView
+                            android:id="@+id/textView103"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="중량(kg)" />
+
+                        <TextView
+                            android:id="@+id/textView104"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="회수" />
+
+                        <TextView
+                            android:id="@+id/textView105"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/textView106"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView107"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="1" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber40"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber41"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox27"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox28"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView108"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="2" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber42"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber43"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox29"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox30"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView109"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="3" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber44"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber45"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox31"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox32"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/Chin_Row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView98"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:background="#2196F3"
+                    android:gravity="center_vertical"
+                    android:text="친업"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="세트 간 90초 휴식" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView119"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:text="세트" />
+
+                        <TextView
+                            android:id="@+id/textView120"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="중량(kg)" />
+
+                        <TextView
+                            android:id="@+id/textView121"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="회수" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView124"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="1" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber46"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="없음"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber47"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox33"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox34"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView125"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="2" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber48"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="없음"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber49"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox35"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox36"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView126"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="3" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber50"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="없음"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber51"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox37"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox38"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="100dp"
+                    android:layout_height="250dp"
+                    android:background="#2196F3"
+                    android:gravity="center_vertical"
+                    android:text="비하인드 넥 프레스"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="세트 간 90초 휴식" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView41"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="세트" />
+
+                        <TextView
+                            android:id="@+id/textView42"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="중량(kg)" />
+
+                        <TextView
+                            android:id="@+id/textView43"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="회수" />
+
+                        <TextView
+                            android:id="@+id/textView44"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView51"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="1" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox45"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox46"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView52"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="2" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox47"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox48"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView53"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="3" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber5"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber6"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox49"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox50"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView54"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="4" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber7"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber8"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox51"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox52"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:background="#2196F3"
+                    android:gravity="center_vertical"
+                    android:text="바벨 컬"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="세트 간 90초 휴식" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView59"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:text="세트" />
+
+                        <TextView
+                            android:id="@+id/textView60"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="중량(kg)" />
+
+                        <TextView
+                            android:id="@+id/textView61"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="회수" />
+
+                        <TextView
+                            android:id="@+id/textView62"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/textView63"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView64"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="1" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber17"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber18"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox61"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox62"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView65"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="2" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber19"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber20"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="10회"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox63"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox64"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView66"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="3" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber21"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="입력"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber22"
+                            android:layout_width="50dp"
+                            android:layout_height="62.5dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox65"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox66"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:gravity="center_vertical"
+                    android:text="벤트 니 싯업"
+                    app:autoSizeTextType="uniform"
+                    android:background="#2196F3" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="세트 간 90초 휴식" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView46"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="세트" />
+
+                        <TextView
+                            android:id="@+id/textView47"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="중량(kg)" />
+
+                        <TextView
+                            android:id="@+id/textView48"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="회수" />
+
+                        <TextView
+                            android:id="@+id/textView49"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/textView50"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView55"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="1" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber9"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:hint="없음" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber10"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox53"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox54"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView56"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="2" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber11"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="없음"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber12"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox55"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox56"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView57"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="3" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber13"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="없음"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber14"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox57"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox58"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView58"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="4" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber15"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="없음"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber16"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:hint="많이"
+                            android:inputType="number" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox59"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="성공" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox60"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="실패" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@ package com.example.healtherlogin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Program_Recommendation extends AppCompatActivity {
+public class Golden_Six_Show extends AppCompatActivity {
 
 
 }

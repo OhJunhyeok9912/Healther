@@ -7,17 +7,18 @@
 
     <!--타이틀바-->
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="415dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
         <TextView
-            android:text="오늘 수행할 운동입니다"
-            android:textSize="20sp"
-            android:textColor="#fff"
-            android:gravity="center"
+            android:layout_width="303dp"
+            android:layout_height="match_parent"
             android:background="#ff7a00"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"/>
+            android:gravity="center"
+            android:text="오늘 수행할 운동입니다"
+            android:textColor="#fff"
+            android:textSize="20sp" />
     </LinearLayout>
     <!--//end타이틀바-->
     <!--Notice-->
@@ -139,8 +140,8 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="300dp"
-            android:layout_height="113dp"
+            android:layout_width="515dp"
+            android:layout_height="match_parent"
             android:background="#00000000"
             android:gravity="center"
             android:onClick="OnComplete"

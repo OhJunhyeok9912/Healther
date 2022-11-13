@@ -4,9 +4,10 @@ public class User {
 
     public String email;
     public String password;
-    public String old;
-    public String tall;
+    public String age;
+    public String height;
     public String weight;
+    public String gender;
 
     public User(){
         // Default constructor required for calls to DataSnapshot.getValue(FirebasePost.class)
@@ -14,22 +15,25 @@ public class User {
 
     public String getemail(){return email;}
     public String getpassword(){return password;}
-    public String getold(){return old;}
-    public String gettall(){return tall;}
+    public String getage(){return age;}
+    public String getheight(){return height;}
     public String getweight(){return weight;}
+    public String getgender(){return gender;}
 
 
     public void setemail(String email){this.email = email;}
     public void setpassword(String password){this.password = password;}
-    public void setold(String old){this.old = old;}
-    public void settall(String tall){this.tall = tall;}
+    public void setage(String age){this.age = age;}
+    public void setheight(String height){this.height = height;}
     public void setweight(String weight){this.weight = weight;}
+    public void setgender(String gender){this.gender = gender;}
 
-    public User(String email, String password,String old, String tall, String weight){
+    public User(String email, String password,String age, String height, String weight,String gender){
         this.email=email;
         this.password=password;
-        this.old=old;
-        this.tall=tall;
+        this.age=age;
+        this.height=height;
         this.weight=weight;
+        this.gender=gender;
     }
 }

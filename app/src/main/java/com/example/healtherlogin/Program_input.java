@@ -27,7 +27,7 @@ public class Program_input extends AppCompatActivity {
     private String squ,ben,bab,ove,dea;
     private final String UID;
     Calendar cal = Calendar.getInstance();
-    Date today = Calendar.getInstance().getTime();
+    Date today = cal.getInstance().getTime();
     SimpleDateFormat yyyymmdd = new SimpleDateFormat("yyyyMMdd");
     String date = yyyymmdd.format(today);
     String InitialType = "Init";

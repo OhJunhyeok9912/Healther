@@ -24,8 +24,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Program_home"/>
         <activity android:name=".Program_input"/>
+        <activity android:name=".Program_BMI"/>
+        <activity android:name=".For_Ordinary_Program_list"/>
+        <activity android:name=".For_Obese_Program_list"/>
+        <activity android:name=".For_UnderWeight_Program_list"/>
+        <activity android:name=".Golden_Six_Home"/>
+        <activity android:name=".Golden_Six_Show"/>
+        <activity android:name=".Golden_Six_Input"/>
+        <activity android:name=".Diary_Home" />
         <activity android:name=".Signup" />
         <activity android:name=".Program"/>
         <activity android:name=".Program_show" />

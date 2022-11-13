@@ -78,7 +78,7 @@
                     app:autoSizeTextType="uniform" />
 
                 <TextView
-                    android:id="@+id/textView22"
+                    android:id="@+id/Height"
                     android:layout_width="210dp"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -99,7 +99,7 @@
                     app:autoSizeTextType="uniform" />
 
                 <TextView
-                    android:id="@+id/textView26"
+                    android:id="@+id/Weight"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -120,7 +120,7 @@
                     app:autoSizeTextType="uniform" />
 
                 <TextView
-                    android:id="@+id/textView27"
+                    android:id="@+id/Age"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -141,7 +141,7 @@
                     app:autoSizeTextType="uniform" />
 
                 <TextView
-                    android:id="@+id/textView28"
+                    android:id="@+id/Gender"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -153,7 +153,7 @@
         </TableLayout>
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/Fix"
             android:layout_width="match_parent"
             android:layout_height="59dp"
             android:text="수정하기" />

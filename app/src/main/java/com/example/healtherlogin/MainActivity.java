@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {//성공했을때
                                     Intent intent = new Intent(MainActivity.this, Diary_Home.class);
                                     startActivity(intent);
+                                    finish();
                                 } else {//실패했을때
                                     Toast.makeText(MainActivity.this, "로그인 오류", Toast.LENGTH_SHORT).show();
                                 }

@@ -124,20 +124,17 @@ public class Program_BMI extends AppCompatActivity {
                     Obese.putExtra("BMI",strBMI);
                     Obese.putExtra("Weight",strWeight);
                     startActivity(Obese);
-                    finish();
                 }
                 else if(BMI>=18.5&&BMI<25){
                     Intent Ordinary = new Intent(Program_BMI.this, For_Ordinary_Program_list.class);
                     Ordinary.putExtra("BMI",strBMI);
                     Ordinary.putExtra("Weight",strWeight);
                     startActivity(Ordinary);
-                    finish();
                 }else if (BMI<18.5){
                     Intent UnderWeight = new Intent(Program_BMI.this, For_UnderWeight_Program_list.class);
                     UnderWeight.putExtra("BMI",strBMI);
                     UnderWeight.putExtra("Weight",strWeight);
                     startActivity(UnderWeight);
-                    finish();
                 }
             }
 

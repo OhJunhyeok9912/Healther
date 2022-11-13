@@ -29,11 +29,13 @@ public class Program extends AppCompatActivity {
                 if(item.getItemId()==R.id.Diary){
                     Intent Diary= new Intent(Program.this, Diary_Home.class);
                     startActivity(Diary);
+
                 }else if(item.getItemId()==R.id.Calculate){
                     Toast.makeText(Program.this, "현재 화면입니다", Toast.LENGTH_SHORT).show();
                 }else if(item.getItemId()==R.id.Recommendation){
                     Intent Recommendation= new Intent(Program.this, Program_BMI.class);
                     startActivity(Recommendation);
+
                 }
 
                 return false;

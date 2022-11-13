@@ -7,8 +7,8 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="417dp"
-        android:layout_height="33dp"
+        android:layout_width="422dp"
+        android:layout_height="39dp"
         android:background="#673AB7"
         android:gravity="center"
         android:text="골든 식스 운동하기"
@@ -26,13 +26,13 @@
         android:layout_marginStart="23dp"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="1dp"
-        android:text="TextView"
+        android:text="Time"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/Record"
         android:layout_width="122dp"
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
@@ -40,11 +40,11 @@
         android:layout_marginBottom="8dp"
         android:text="운동시작"
         app:layout_constraintBottom_toTopOf="@+id/textView30"
-        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintEnd_toStartOf="@+id/Pause"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/Finish"
         android:layout_width="122dp"
         android:layout_height="55dp"
         android:layout_marginStart="4dp"
@@ -53,10 +53,10 @@
         android:text="운동종료"
         app:layout_constraintBottom_toTopOf="@+id/textView30"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button11" />
+        app:layout_constraintStart_toEndOf="@+id/Pause" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/Pause"
         android:layout_width="122dp"
         android:layout_height="55dp"
         android:layout_marginStart="9dp"
@@ -64,14 +64,12 @@
         android:layout_marginBottom="8dp"
         android:text="일시정지"
         app:layout_constraintBottom_toTopOf="@+id/textView30"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
-        app:layout_constraintStart_toEndOf="@+id/button9" />
+        app:layout_constraintEnd_toStartOf="@+id/Finish"
+        app:layout_constraintStart_toEndOf="@+id/Record" />
 
     <ScrollView
-        android:layout_width="414dp"
-        android:layout_height="568dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="2dp"
+        android:layout_width="416dp"
+        android:layout_height="562dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
@@ -99,6 +97,7 @@
                     android:id="@+id/textView11"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
+                    android:shadowColor="#FFFEFE"
                     android:text="세트 간 2분 휴식" />
 
                 <TableLayout
@@ -167,17 +166,24 @@
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox2"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton3"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:text="실패" />
+
+                        </RadioGroup>
 
                     </TableRow>
 
@@ -209,17 +215,25 @@
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox3"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox4"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton10"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton11"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
 
                     </TableRow>
 
@@ -251,17 +265,25 @@
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox5"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox6"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton14"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton15"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
 
                     </TableRow>
 
@@ -293,17 +315,25 @@
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox7"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox8"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton16"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton17"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
 
                     </TableRow>
                 </TableLayout>
@@ -395,17 +425,25 @@
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox27"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox28"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton38"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton39"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
 
                     </TableRow>
 
@@ -437,17 +475,25 @@
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox29"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox30"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton40"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton41"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
 
                     </TableRow>
 
@@ -479,17 +525,25 @@
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox31"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox32"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton42"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton43"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
 
                     </TableRow>
                 </TableLayout>
@@ -578,17 +632,25 @@
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox33"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox34"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton44"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton45"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
 
                     </TableRow>
 
@@ -618,17 +680,25 @@
                             android:hint="많이"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox35"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox36"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton46"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton47"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
 
                     </TableRow>
 
@@ -658,17 +728,25 @@
                             android:hint="많이"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox37"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox38"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton48"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton49"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
 
                     </TableRow>
                 </TableLayout>
@@ -676,7 +754,7 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView35"
@@ -699,7 +777,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView41"
@@ -732,7 +810,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView51"
@@ -756,22 +834,31 @@
                             android:hint="10회"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox45"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox46"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton18"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton19"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView52"
@@ -795,22 +882,31 @@
                             android:hint="10회"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox47"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox48"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton20"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton21"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView53"
@@ -834,22 +930,31 @@
                             android:hint="10회"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox49"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox50"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton22"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton23"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView54"
@@ -874,24 +979,33 @@
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox51"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox52"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton34"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton35"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
                 </TableLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView37"
@@ -914,7 +1028,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView59"
@@ -947,7 +1061,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView64"
@@ -971,22 +1085,31 @@
                             android:hint="10회"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox61"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox62"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton50"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton51"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView65"
@@ -1010,22 +1133,31 @@
                             android:hint="10회"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox63"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox64"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton52"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton53"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView66"
@@ -1049,33 +1181,42 @@
                             android:hint="많이"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox65"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox66"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton54"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton55"
+                                android:layout_width="50dp"
+                                android:layout_height="62.5dp"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
                 </TableLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView39"
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
+                    android:background="#2196F3"
                     android:gravity="center_vertical"
                     android:text="벤트 니 싯업"
-                    app:autoSizeTextType="uniform"
-                    android:background="#2196F3" />
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
                     android:id="@+id/textView40"
@@ -1089,7 +1230,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView46"
@@ -1122,7 +1263,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView55"
@@ -1135,8 +1276,8 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:ems="10"
-                            android:inputType="number"
-                            android:hint="없음" />
+                            android:hint="없음"
+                            android:inputType="number" />
 
                         <EditText
                             android:id="@+id/editTextNumber10"
@@ -1146,22 +1287,31 @@
                             android:hint="많이"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox53"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox54"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton26"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton27"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView56"
@@ -1185,22 +1335,31 @@
                             android:hint="많이"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox55"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox56"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton28"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton29"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView57"
@@ -1224,22 +1383,31 @@
                             android:hint="많이"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox57"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox58"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton30"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton31"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/textView58"
@@ -1263,17 +1431,26 @@
                             android:hint="많이"
                             android:inputType="number" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox59"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="성공" />
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/checkBox60"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:text="실패" />
+                            <RadioButton
+                                android:id="@+id/radioButton32"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="성공" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton33"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="실패" />
+                        </RadioGroup>
+
                     </TableRow>
                 </TableLayout>
             </TableRow>
